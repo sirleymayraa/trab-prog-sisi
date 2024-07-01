@@ -1,0 +1,28 @@
+<!doctype html>
+
+<head>
+    <title id="nao">{% block title %}{% endblock %} - Sistema Biblioteca da Sisi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mycss.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bulma@1.0.0/css/bulma.min.css"
+>
+
+</head>
+
+<body>
+    <h1 id="sim">BIBLIOTECA DA SISI</h1>
+    <a href="{{ url_for("home") }}">Página inicial</a> | 
+    <a href="{{ url_for("about") }}">Sobre o sistema</a> | 
+    <a href="{{ url_for("listar_livro") }}">Listagem</a>
+    <hr />
+
+    <section class="content">
+        <header> {% block header %}{% endblock %} </header>
+
+        {% block content %}{% endblock %}
+    </section>
+
+</body>

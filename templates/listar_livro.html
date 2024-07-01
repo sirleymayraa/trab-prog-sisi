@@ -1,0 +1,36 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+  <h1 id="talvez">{% block title %}Listagem de livros{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+  
+<p>
+    <a href="{{ url_for("form_adicionar_livro") }}">Cadastrar novo livro</a>
+</p>
+
+<table border="2">
+    <tr>
+        <th>Nome</td>
+        <th>Editora</td>
+        <th>Autor</td>
+        <th>Gênero</td>
+        <th>Classificação Indicativa</td>
+        <th>Ano de Edição</td>
+    </tr>
+
+    {% for p in livros %}
+    <tr>
+        <td>{{p.nome}}</td>
+        <td>{{p.editora}}</td>
+        <td>{{p.autor}}</td>
+        <td>{{p.genero}}</td>
+        <td>{{p.classificacaoIndicativa}}</td>
+        <td>{{p.anoDeEdicao}}</td>
+    </tr>
+    {% endfor %}
+   
+</table>
+
+{% endblock %}

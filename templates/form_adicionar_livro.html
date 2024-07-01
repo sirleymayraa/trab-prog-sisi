@@ -1,0 +1,32 @@
+{% extends 'main_template.html' %}
+
+{% block header %}
+<h1 id="talvez">{% block title %}Cadastrar livros{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+<form action="adicionar_livro">
+    <p>
+        Nome: <input type="text" name="nome" value="Como usar flask rapido e facil">
+    </p>
+    <p>
+        Editora: <input type="text" name="editora" value="companhia das letras">
+    </p>
+    <p>
+        Autor: <input type="text" name="autor" value="Sirley Mayra Amaral">
+    </p>
+    <p>
+        Gênero: <input type="text" name="genero" value="ficcao">
+    </p>
+    <p>
+        Classificação indicativa: <input type="text" name="classificacaoIndicativa" value="12">
+    </p>
+    <p>
+        Ano de edição: <input type="text" name="anoDeEdicao" value="2018">
+    </p>
+
+    <button>Cadastrar</button>
+</form>
+
+{% endblock %}

@@ -39,9 +39,30 @@ def adicionar_livro():
         return redirect("listar_livro") 
 
 '''
-run:
-$ flask run
+# criar o ambiente virtual:
+python3 -m venv venv
+
+# ativar o ambiente virtual:
+source venv/bin/activate
+
+# desativar o ambiente virtual:
+deactivate
+
+# instalar pacotes python:
+python3 -m pip install nomePacote
+
+# instalar flask:
+python3 -m pip install flask
+
+# instalar pacotes de um arquivo de texto:
+python3 -m pip install -r requirements.txt
+
+# rodar um projeto flask:
+python3 app.py
 '''
 
 # git config --global user.email "you@example.com"
 #   git config --global user.name "Your Name"
+
+if __name__ == '__main__':
+    app.run(debug=True)

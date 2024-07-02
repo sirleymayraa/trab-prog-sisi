@@ -1,7 +1,7 @@
 {% extends 'main_template.html' %}
 
 {% block header %}
-  <h1 id="talvez">{% block title %}Listagem de livros{% endblock %}</h1>
+  <h1 id="talvez" style="text-align: center;">{% block title %}Listagem de livros{% endblock %}</h1>
 {% endblock %}
 
 {% block content %}
@@ -10,7 +10,7 @@
     <a href="{{ url_for("form_adicionar_livro") }}">Cadastrar novo livro</a>
 </p>
 
-<table border="2">
+<table border="2" style="margin: auto;">
     <tr>
         <th>Nome</td>
         <th>Editora</td>
